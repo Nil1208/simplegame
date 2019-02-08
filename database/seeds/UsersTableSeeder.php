@@ -16,14 +16,14 @@ class UsersTableSeeder extends Seeder
             'email' => 'beer@buhojmedved.ru',
             'name' => 'beer',
             'password' => Hash::make('beerandsmile'),
-            'events' => json_encode(['tokens' => ['personal' => Hash::make('beer@buhojmedved.ru')]]),
+            'events' => json_encode(['tokens' => ['personal' => Hash::make('beer@buhojmedved.ru'), 'global' => 'global.chat']]),
         ]);
 
         DB::table('users')->insert([
             'email' => 'smile@buhojmedved.ru',
             'name' => 'smile',
             'password' => Hash::make('beerandsmile'),
-            'events' => json_encode(['tokens' => ['personal' => Hash::make('smile@buhojmedved.ru')]]),
+            'events' => json_encode(['tokens' => ['personal' => Hash::make('smile@buhojmedved.ru'), 'global' => 'global.chat']]),
         ]);
     }
 }
